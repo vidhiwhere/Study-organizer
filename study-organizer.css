@@ -1,0 +1,228 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Pacifico',cursive;
+    font-weight: 700;
+}
+
+body {
+    background-color: rgb(232, 238, 238);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #8e44ad, #3498db);
+    color: black;
+    font-weight: 1200;
+    background-image: url("todo.jpg");
+    height: 700px;
+    width: 100%;
+    background-size: cover;
+     /* Ensure text contrasts the background */
+}
+
+/* Main Screen */
+#main-screen {
+    text-align: center;
+    padding: 20px;
+}
+
+#main-screen button {
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #8c53ff;
+    color: white;
+}
+
+#main-screen button:hover {
+    background-color: #6e44bd;
+}
+
+#choose-text {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Back Button */
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn:hover {
+    background-color: #2980b9;
+}
+
+/* To Do List */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.input-container {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding: 20px;
+}
+
+.input-container input {
+    border: none;
+    outline: none;
+    padding: 12px;
+    margin-block: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    color: black; /* Text color for user input */
+}
+
+.input-container input[type="text"] {
+    width: 70%;
+}
+
+.input-container input[type="button"] {
+    background-color: #3da33d;
+    color: #fff;
+    font-weight: 700;
+    margin-left: 8px;
+    cursor: pointer;
+    padding: 12px 24px;
+}
+
+.input-container input[type="button"]:hover {
+    background-color: #60b160;
+}
+
+ul.todoList {
+    width: 70%;
+    max-width: 450px;
+    overflow-wrap: break-word; /* Ensures text stays inside */
+    word-wrap: break-word; /* Ensures text stays inside */
+    word-break: break-word; /* Added to further break words if necessary */
+    white-space: normal; /* Ensures long text wraps to next line */
+}
+
+ul.todoList li {
+    list-style-type: none;
+    cursor: pointer;
+    margin-block-end: 12px;
+    border-radius: 8px;
+    border: 1px solid #a19f9f;
+    padding: 6px 12px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.5s;
+    color: black; /* Text color for todo items */
+}
+
+ul.todoList li:hover {
+    background-color: #cbcaca;
+}
+
+ul.todoList li p {
+    flex-grow: 1;
+    padding: 2px;
+}
+
+/* Notes Section */
+#container {
+    background-color:#fff;
+    border-radius: 8px;
+    box-shadow: 0px 10px 15px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    width: 827px;
+    height: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    overflow-y: scroll;
+    margin-top: 20px;
+}
+
+ul#notes-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left; /* Aligns notes to the left */
+}
+
+ul#notes-list li {
+    background-color: #ffcc00; /* Bold yellow */
+    margin: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensures text stays inside */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    color: black; /* Text color for notes */
+}
+
+ul#notes-list li span {
+    text-align: left;
+    overflow-y: scroll;
+    max-height: 150px;
+    padding: 5px;
+    scrollbar-color: #3498db white;
+    scrollbar-width: thin;
+}
+
+#addNoteDiv {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 60px; /* Padding remains the same */
+    border-radius: 8px;
+    height: 300px; /* Original size */
+    width: 300px;  /* Original size */
+    margin: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#addNoteDiv:hover {
+    background-color: #f1f1f1;
+    transition: 0.25s;
+}
+
+#addNoteDiv i {
+    font-size: 70px;
+    color: #5a4c81; /* Ensure icon is visible */
+}
+
+.hidden {
+    display: none;
+}

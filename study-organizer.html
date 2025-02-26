@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>To Do List & Note Taking App</title>
+   
+    <link rel="stylesheet" href="study-organizer.css">
+    <script src="study-organizer.js" defer></script>
+    
+</head>
+<body>
+<div id="main-screen">
+    <h1 id="choose-text">So what's the plan for today?</h1>
+    <button id="todo-section-btn">Make a To-Do List</button>
+    <button id="notes-section-btn">Take some Notes</button>
+</div>
+<div id="todo-section" class="hidden">
+    <button class="back-btn" onclick="goBackToMain()">Back</button>
+    <div class="container">
+        <div class="input-container">
+            <h1>My To Do List</h1>
+            <input type="text" placeholder="Add a new to do..." id="inputBox">
+            <input type="button" value="Add" id="addBtn">
+        </div>
+        <ul class="todoList" id="todoList"></ul>
+    </div>
+</div>
+<div id="notes-section" class="hidden">
+    <button class="back-btn" onclick="goBackToMain()">Back</button>
+    <div id="container">
+        <div id="list-header">
+            <div id="addNoteDiv" onclick="popup()">
+                <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="blankDiv"></div>
+            <div class="blankDiv"></div>
+        </div>
+        <div id="list-container">
+            <ul id="notes-list"></ul>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+<script src="003c.js"></script>
+</body>
+</html>
